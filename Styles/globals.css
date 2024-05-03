@@ -1,0 +1,56 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+body {
+    background-image: 
+    url('../public/map-BlueSide.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+
+.image{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background-image: radial-gradient(circle at center, rgba(255, 255, 255, 0.005) 0, rgba(255, 255, 255, 0.005) 1px, rgba(0, 6, 18, 0.4) 1px),
+    linear-gradient(90deg, rgba(69, 131, 131, 0.8) 0%, rgba(14, 14, 14, 0.3) 20%, rgba(14, 14, 14, 0.3) 50%, rgba(14, 14, 14, 0.3) 80%, rgba(94, 9, 9, 0.8) 100%);
+}
+
+.champion_scroll::-webkit-scrollbar {
+    width: 7px;
+  }
+  
+  /* Track */
+.champion_scroll::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px rgb(123, 92, 35,0.7);
+    border-radius: 10px;
+  }
+  
+  /* Handle */
+.champion_scroll::-webkit-scrollbar-thumb {
+    background: rgb(123, 92, 35);
+    border: solid 1px rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+  }
+
+  .fillColor{
+    filter: invert(14%) sepia(21%) saturate(0%) hue-rotate(139deg) brightness(99%) contrast(89%);
+  }
+
+  .teamBorder { 
+   box-shadow:  0px 0 1px 1px #bd944280;
+  }
+  
+  .ban{
+    background-image: url('../public/icon-ban.png');
+  }

@@ -1,0 +1,101 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator pothos {
+  provider = "prisma-pothos-types"
+}
+
+model Champions {
+  id Int @id @unique
+  name String @unique
+  image String
+  title String
+  shortBio String
+  playStyle String[]
+  banUrlVoice String
+  chooseUrlVoice String
+  sfxUrl String
+  roles String[]
+  skinsId Int @unique
+  passiveId Int 
+  skins Skins[]
+  runesRecommends RunesRecommendations[]
+  passive Passives @relation(fields: [passiveId], references: [id])
+}
+
+model Runes {
+  id Int @id @unique @default(autoincrement())
+  runeId Int[] @unique
+  name String 
+  tooltip String
+  shortDesc String
+  longDesc String
+  iconUrl String
+  endOfGameStats String[]
+  recommendations String[]
+  description String
+}
+
+model RunesRecommendations {
+  id Int @id @default(autoincrement())
+  position String
+  mapId String
+  perkIds Int[] 
+  primaryPerkStyleId Int
+  summonerSpellIds Int[]  
+  championId Int
+  champion Champions @relation(fields: [championId], references: [id])
+}
+
+model Passives {
+  id Int @id
+  name String
+  description String
+  abilityVideo String
+  abilityVideoImage String
+  abilityIcon String
+  champions Champions[]
+}
+
+model SkinsLines {
+  id Int @id
+  name String
+  description String
+  skin Skins[] 
+}
+
+model Skins {
+  id Int @id
+  skinId Int
+  skinLineId Int 
+  name String
+  splashArt String
+  uncenteredSplashArt String
+  tileArt String
+  loadScreenArt String
+  skinType String
+  rarity String
+  isLegacy Boolean
+  description String
+  chromaId Int? @unique
+  champions Champions @relation(fields: [skinId], references: [skinsId])
+  skinLine SkinsLines @relation(fields: [skinLineId], references: [id])
+  chroma Chromas[]
+}
+
+model Chromas {
+  id Int @id
+  skinId Int 
+  name String
+  colors String
+  description String
+  rarity String
+  image String
+  skins Skins @relation(fields: [skinId], references: [chromaId])
+}
