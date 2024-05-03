@@ -59,7 +59,4 @@ Repositório do Scrapping: [LOLScraping](https://github.com/3liasNeto/lol-scrapp
 </div>
 
 
-
-```
-[^1]: My reference.
-```
+<h6> Meu Discord: _drky </h6>
