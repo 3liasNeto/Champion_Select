@@ -1,5 +1,6 @@
 
 # [Champion Select - LoL]()
+![image](https://github.com/3liasNeto/Champion_Select/assets/87040427/a5062de1-c9e5-4af8-96ea-b40aca189f2b)
 
 Este projeto tem como objetivo reunir vários dos meus conhecimentos para recriar uma das telas que mais vi na vida: a champion select do League of Legends. Embora tenha dedicado bastante tempo trabalhando nestas telas e aprendido e revisado muitos conceitos, acredito que há muito a melhorar. Por mais que seja uma ideia interessante, ela é apenas o início de um projeto maior que almejo concluir. Por enquanto, vamos nos divertir montando drafts com esta Champion Select.
 
