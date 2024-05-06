@@ -30,7 +30,7 @@ const ChampionSelectArea: React.FC<champiosSelectAreaProps> = ({
                 height={84}
                 width={84}
                 onClick={() => chooseChampion(champion)}
-                className={`${isChampionsSelected(champion.name) || isChampionsSelected(champion.name) ? 'grayscale-[60]' : ''}`}
+                className={`${isChampionsSelected(champion.name) || isChampionsBanned(champion.name) ? 'grayscale-[60]' : ''}`}
               />
               <h1 className="text-white/80 font-medium">{champion.name}</h1>
             </div>
